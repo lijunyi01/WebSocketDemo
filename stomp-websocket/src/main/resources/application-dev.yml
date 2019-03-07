@@ -30,7 +30,8 @@ spring:
   #redis
   redis:
       cluster:
-        nodes: namenode22:6379,datanode23:6379,datanode24:6379
+#        nodes: namenode22:6379,datanode23:6379,datanode24:6379
+        nodes: 192.168.168.175:6379
         max-redirects: 6
       timeout: 300000
       jedis:

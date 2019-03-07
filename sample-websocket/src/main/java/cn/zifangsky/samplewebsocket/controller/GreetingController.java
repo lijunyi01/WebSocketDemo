@@ -13,11 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class GreetingController {
 
+    // 浏览器访问：http://localhost:7000/reverse
     @RequestMapping("/reverse")
     public ModelAndView reverse(){
         return new ModelAndView("websocket/reverse");
     }
 
+    // 浏览器访问：http://localhost:7000/echo
     @RequestMapping("/echo")
     public ModelAndView echo(){
         return new ModelAndView("websocket/echo");
