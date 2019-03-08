@@ -23,8 +23,8 @@ public class WebSocketConfig implements WebSocketConfigurer{
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(echoWebSocketHandler(), "/echoMessage");
-        registry.addHandler(echoWebSocketHandler(), "/echoMessage_SockJS").withSockJS();
+        registry.addHandler(echoWebSocketHandler(), "/echoMessage").setAllowedOrigins("*");
+        registry.addHandler(echoWebSocketHandler(), "/echoMessage_SockJS").setAllowedOrigins("*").withSockJS();
     }
 
     /**
